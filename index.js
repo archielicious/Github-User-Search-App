@@ -112,23 +112,26 @@ function updateDisplay(userData) {
       userCompany.textContent !== "Not Available" ? dataColor : noDataColor;
 
     if (userTwitter.textContent !== "Not Available") {
-      document
-        .getElementById("user-twitter")
-        .addEventListener("click", function () {
-          window.open(
-            `https://www.twitter.com/${userTwitter.textContent}`,
-            "_blank"
-          );
-        });
+      userTwitter.addEventListener("click", clickTwitter);
+    } else {
+      userTwitter.removeEventListener("click", clickTwitter);
     }
     if (userLink.textContent !== "Not Available") {
-      document
-        .getElementById("user-link")
-        .addEventListener("click", function () {
-          window.open(`${userLink.textContent}`, "_blank");
-        });
+      userLink.addEventListener("click", clickLink);
+    } else {
+      userLink.removeEventListener("click", clickLink);
     }
   }
+}
+
+function clickTwitter() {
+  let userTwitter = document.getElementById("user-twitter");
+  window.open(`https://www.twitter.com/${userTwitter.textContent}`, "_blank");
+}
+
+function clickLink() {
+  let userLink = document.getElementById("user-link");
+  window.open(`${userLink.textContent}`, "_blank");
 }
 
 async function getUser() {
