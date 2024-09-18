@@ -69,13 +69,13 @@ function updateDisplay(userData) {
 
     userRepos.textContent = userData.public_repos;
     userRepos.style.color =
-      userRepos.textContent !== 0 ? dataColor : noDataColor;
+      userRepos.textContent !== "0" ? dataColor : noDataColor;
     userFollowers.textContent = userData.followers;
     userFollowers.style.color =
-      userFollowers.textContent !== 0 ? dataColor : noDataColor;
+      userFollowers.textContent !== "0" ? dataColor : noDataColor;
     userFollowing.textContent = userData.following;
     userFollowing.style.color =
-      userFollowing.textContent !== 0 ? dataColor : noDataColor;
+      userFollowing.textContent !== "0" ? dataColor : noDataColor;
     userLocation.textContent = userData.location
       ? getCityName(userData.location)
       : "Not Available";
