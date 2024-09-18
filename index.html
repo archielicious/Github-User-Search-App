@@ -116,6 +116,11 @@
             cursor: pointer;
         }
 
+        .form-control:focus {
+            box-shadow: none;
+            border: none;
+        }
+
         @media only screen and (max-width: 767px) {
             #user-bio-mobile {
                 display: block;
@@ -185,7 +190,8 @@
                     <input type="text" class="form-control" id="user-name-search"
                         placeholder="Search Github username..." aria-label="Search Github username"
                         aria-describedby="button-addon2">
-                    <button class="btn btn-primary" type="button" id="button-addon2" style="background-color: tomato;;">
+                    <button class="btn btn-primary" type="button" id="button-addon2"
+                        style="background-color: tomato; border: none;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-search" viewBox="0 0 16 16">
                             <path
