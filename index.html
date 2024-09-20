@@ -27,6 +27,7 @@
             --user-link-color: hsl(212, 100%, 50%);
             --main-card-color: hsl(222, 41%, 20%);
             --inner-card-color: #131C2F;
+            --span-color: #384981;
         }
 
         [data-theme='light'] {
@@ -37,6 +38,7 @@
             --user-link-color: #9381ff;
             --main-card-color: #ccdbfd;
             --inner-card-color: #d7e3fc;
+            --span-color: #d7e3fc;
         }
 
         body {
@@ -118,12 +120,29 @@
 
         .form-control {
             border: none;
+            background-color: var(--main-card-color);
+            color: var(--secondary-text-color);
+
         }
 
         .form-control:focus {
             box-shadow: none;
             border: none;
+            background-color: var(--main-card-color);
+            color: var(--main-text-color);
+
         }
+
+        .form-control::placeholder {
+            color: var(--secondary-text-color);
+        }
+
+        .input-group-text {
+            background-color: var(--span-color);
+            color: var(--secondary-text-color);
+            border: none;
+        }
+
 
         @media only screen and (max-width: 767px) {
             #user-bio-mobile {
@@ -318,9 +337,6 @@
     </div>
     <footer class="attribution d-flex justify-content-center text-center">
         <p class="attribution-para mb-0 mt-5 linen">
-            Challenge by
-            <a class="credit-link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend
-                Mentor</a>.
             Coded with
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="tomato"
                 class="bi bi-balloon-heart-fill" viewBox="0 0 16 16">
